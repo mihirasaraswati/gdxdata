@@ -17,7 +17,7 @@ gdxfiles = list.files(".", pattern="GDX_FY[0-1][0-9].xlsx", all.files = FALSE, f
 #prob - associating fys with data from files names. there are more than 3 variations of fys for 17 files. easier to rename the files manually
 fys <- c(2007:2015)
 
-#NOTE will read up to 2009, the remaining files differ. GU was added in 2009 and Uniques weren't reported in 2006. 
+#NOTE will read all files from 2007 to 2015 
 for(i in 1:length(gdxfiles)){
   tmpdfState <-  read.xlsx(gdxfiles[i],
                            sheetIndex = 1,

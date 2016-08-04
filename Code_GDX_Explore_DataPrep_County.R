@@ -24,7 +24,7 @@ states <- states[2:54]
 rm(wb)
 
 #Read files from FY15 to FY09 since Guam is not FY08 & FY7=07
-for(i in 7:7){
+for(i in 1:7){
   #read up to 53, 50 state plus DC, PR, and GU
   for(j in 1:53){
     tmpdfCty <- read.xlsx(gdxfiles[i],
@@ -180,6 +180,3 @@ write.csv(gdxcty, file = "gdxcty.csv")
 saveRDS(filter(gdxcty, FY == "2015"), file="gdxcty15.rds")
 # SAVE FY15 as CSV (NOTE!!! csv doesn't preserve the FIPS codes that start with zero)
 write.csv(filter(gdxcty, FY == "2015"), file="gdxcty15.csv")
-
-# Stop the clock
-proc.time() - ptm
