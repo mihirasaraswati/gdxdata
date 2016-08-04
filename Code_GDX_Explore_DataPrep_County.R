@@ -1,5 +1,7 @@
+# Start the clock!
+ptm <- proc.time()
 #ATTENTION - this command should be run before loading xlsx library
-# options(java.parameters = "-Xmx8000m")
+options(java.parameters = "-Xmx8000m")
 
 library(xlsx)
 library(dplyr)
@@ -24,7 +26,7 @@ states <- states[2:54]
 rm(wb)
 
 #Read files from FY15 to FY09 since Guam is not FY08 & FY7=07
-for(i in 1:7){
+for(i in 7:7){
   #read up to 53, 50 state plus DC, PR, and GU
   for(j in 1:53){
     tmpdfCty <- read.xlsx(gdxfiles[i],
@@ -174,3 +176,6 @@ gdxcty <- arrange(gdxcty, StateFP, CountyFP)
 saveRDS(gdxcty, file="gdxcty0715.rds")
 #SAVE just FY15 data
 saveRDS(filter(gdxcty, FY == "2015"), file="gdxcty15.rds")
+
+# Stop the clock
+proc.time() - ptm
