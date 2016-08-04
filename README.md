@@ -1,6 +1,4 @@
----
-output: word_document
----
+
 # Introduction
 
 The U.S. Department of Veterans Affairs' Office of Policy and Planning publishes y a report of expenditures by State and County. The Geographic Distribution of Expenditures or GDX has been published each fiscal year since 1996. [These reports/files are available on the National Center for Veteran Analysis and Statistics website.](http://www.va.gov/vetdata/Expenditures.asp) This repository contains two R programs that consolidate GDX report data from 2007 to 2015 into one data set for state level expenditures and one for county level expenditures. The purpose of doing so is to be able to easily analyze the GDX data from the past nine years. The county level data also includes Census FIPS codes so that it can be mapped. 
