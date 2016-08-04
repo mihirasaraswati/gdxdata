@@ -58,3 +58,5 @@ Standardizing the county names is essential for pulling in the FIPS code so that
 4. Perform counts of counties by each state to make each state has the right number of of counties.
 5. Verify that first, last, and middle counties for each state match. 
 6. Verify all county names that start with Mc, St., Ste. 
+
+The Census FIPS - GDX county names crosswalk can be retrieved from Github. [Link to crosswalk.](https://github.com/mihiriyer/gdxdata/blob/master/national_county_edit.xlsx)
