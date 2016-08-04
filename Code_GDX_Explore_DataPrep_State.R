@@ -68,7 +68,7 @@ rm( tmpdfState, fy, fys, gdxclasses, gdxfiles, i, st)
 
 #SAVE State data
 # as Rds (efficient)
-saveRDS(gdxstate0715, file="gdxstate0715.rds")
+saveRDS(gdxstate0715, file="Data_GDXSTATE_0715.rds")
 #as CSV (broadly accepted)
-write.csv(gdxstate0715, file="gdxstate0715.csv")
+write.csv(gdxstate0715, file="Data_GDXSTATE_0715.csv")
 

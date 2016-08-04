@@ -85,9 +85,10 @@ names(gdxcty) <- c("FY", "State", "GDXCountyName", "VetPop", "TotX", "CP", "Cons
 #convert FY to character
 gdxcty$FY <- as.character(gdxcty$FY)
 #convert to numeric
-gdxcty$Uniques <- as.numeric(gdxcty$Uniques)
 gdxcty$VetPop <- as.numeric(gdxcty$VetPop)
+gdxcty$CP <- as.numeric(gdxcty$CP)
 gdxcty$Cons <- as.numeric(gdxcty$Cons)
+gdxcty$Uniques <- as.numeric(gdxcty$Uniques)
 
 # Remove temp variables
 rm(tmpdfCty,  blankrows, fy, fys, gdxfiles, i, j, state, states)
@@ -170,13 +171,16 @@ gdxcty <- gdxcty[, c(2,14,16,1,15,17,3:13)]
 #sort by StateFP and CountyFP
 gdxcty <- arrange(gdxcty, StateFP, CountyFP)
 
+
+# WRITE/SAVE data ---------------------------------------------------------
+
 #SAVE County-FIPS data 
-saveRDS(gdxcty, file="gdxcty0715.rds")
+saveRDS(gdxcty, file="Data_GDXCTY_0715.rds")
 # SAVE as CSV (NOTE!!! csv doesn't preserve the FIPS codes that start with zero)
-write.csv(gdxcty, file = "gdxcty.csv")
+write.csv(gdxcty, file = "Data_GDXCTY_0715.csv")
 
 
 #SAVE just FY15 data
-saveRDS(filter(gdxcty, FY == "2015"), file="gdxcty15.rds")
+saveRDS(filter(gdxcty, FY == "2015"), file="Data_GDXCTY15.rds")
 # SAVE FY15 as CSV (NOTE!!! csv doesn't preserve the FIPS codes that start with zero)
-write.csv(filter(gdxcty, FY == "2015"), file="gdxcty15.csv")
+write.csv(filter(gdxcty, FY == "2015"), file="Data_GDXCTY15.csv")

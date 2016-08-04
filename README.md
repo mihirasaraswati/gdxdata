@@ -12,9 +12,9 @@ I wrote these programs with the intent of being transparent, reproducible and fl
 All the code and data files are freely available on GitHub for anyone to run on their own. Alternatively, you can simply download the consolidated data file(s) to use in their analysis tool of choice. The data files are provided in Rds and CSV format. The CSV files, however, don't preserve the FIPS codes because the leading zeros get dropped. If using the CSV file, the FIPS code field will need to be modified once the file has been read into an analysis program 
 
 1. GitHub Repository: https://github.com/mihiriyer/gdxdata
-2. State Level Expenditures from 2007 to 2015: ***gdxstate0715.Rds*** and ***gdxstate.csv***
-3. County Level Expenditures from 2007 to 2015: ***gdxcty0715.Rds*** and ***gdxcty0715.csv***
-4. County Level Expenditures for 2015: ***gdxcty15.Rds*** and ***gdxcty15.csv***
+2. State Level Expenditures from 2007 to 2015: ***Data_GDXSTATE_0715.Rds*** and ***Data_GDXSTATE_0715.csv***
+3. County Level Expenditures from 2007 to 2015: ***Data_GDXCTY_0715.Rds*** and ***Data_GDXCTY_0715.csv***
+4. County Level Expenditures for 2015: ***Data_GDXCTY15.Rds*** and ***DATA_GDXCTY15.csv***
 
 # Data Consolidation Programs
 
