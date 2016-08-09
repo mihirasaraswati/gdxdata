@@ -1,4 +1,3 @@
-
 # Introduction
 
 The U.S. Department of Veterans Affairs' Office of Policy and Planning publishes y a report of expenditures by State and County. The Geographic Distribution of Expenditures or GDX has been published each fiscal year since 1996. [These reports/files are available on the National Center for Veteran Analysis and Statistics website.](http://www.va.gov/vetdata/Expenditures.asp) This repository contains two R programs that consolidate GDX report data from 2007 to 2015 into one data set for state level expenditures and one for county level expenditures. The purpose of doing so is to be able to easily analyze the GDX data from the past nine years. The county level data also includes Census FIPS codes so that it can be mapped. 
@@ -45,13 +44,13 @@ Additionally in the FY09 file, on the Puerto Rico worksheet, the data starts in 
 
 While programmatically attempting to link the county names to their corresponding FIPS I discovered that county names were not written uniformly across the GDX files and that they differed from the way they written in the [2010 Census FIPS code file.](https://www.census.gov/geo/reference/codes/cou.html) Below are a few examples of how county names differ:
 
-1. Alaska uses borough and census Areas in lieu of county.
-2. Louisiana uses parish.
+1. Alaska uses Borough and Census Areas in lieu of county.
+2. Louisiana uses Parish.
 3. Census FIPS file lists a county as: *Name County*.
 4. GDX files list a county as: *NAME*.
-5. Census lists county names that include the word "city" as *Baltimore city*. GDX lists BALTIMORE (CITY).
+5. Census lists county names that include the word "city" as *Baltimore city*. GDX lists *BALTIMORE (CITY)*.
 7. GDX list counties that have a prefix of Saint/Sainte as St./Ste.
-8. Census lists county names that start with Mc as one word e.g. McPherson. The GDX files 
+8. Census lists county names that start with Mc as one word e.g. *McPherson*. The GDX files has them in both ways depending on the fiscal year e.g. *MC PHERSON* and *MCPHERSON*
 
 Standardizing the county names is essential for pulling in the FIPS code so that the GDX data can ultimately be displayed on a map. It is also necessary to be able to make comparisons over time. I standardized the names in two ways - one by building a crosswalk and programmatically. I found that building a crosswalk was a lot easier because there were simply too many county name variants to address through programming. [The Census FIPS - GDX county names crosswalk can be retrieved from GitHub.](https://github.com/mihiriyer/gdxdata/blob/master/national_county_edit.xlsx) The below outlines the steps for building the crosswalk:
 
