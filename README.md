@@ -61,3 +61,6 @@ Standardizing the county names is essential for pulling in the FIPS code so that
 5. Verify that first, last, and middle counties for each state match. 
 6. Verify all county names that start with Mc, St., and Ste. 
 
+# Caveats 
+
+You will notice from reading the data description tab in FY 2015 file that some of the expenditure variables (General Operating Expenses, Construction, Loan Guaranty, and by association Total Expenditure) are **not distributed by Veteran residences**. This implies that those varibles are not truly geographic in nature and should not be included in any county or state level comparisons.
