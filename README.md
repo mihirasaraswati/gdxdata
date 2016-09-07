@@ -4,7 +4,7 @@ The U.S. Department of Veterans Affairs' Office of Policy and Planning publishes
 
 I wrote these programs with the intent of being transparent, reproducible and flexible as possible. However, I was obliged to make some major compromises because the structure of the files and nomenclature vary across the years. For example in fiscal years 2007 and 2008 there is no data for Guam. Similarly the county names are written differently in some years. All of these nuances are described in detail to at minimum ensure transparency into the methods. The resultant data files created by these programs are reproducible assuming you follow the instructions outlined in this document. 
 
-# Using the Data
+# Using the Data*
 
 All the code and data files are freely available on GitHub for anyone to run on their own. Alternatively, you can simply download the consolidated data file(s) to use in their analysis tool of choice. The data files are provided in Rds and CSV format. The CSV files, however, don't preserve the FIPS codes because the leading zeros get dropped. If using the CSV file, the FIPS code field will need to be modified once the file has been read into an analysis program 
 
@@ -12,6 +12,10 @@ All the code and data files are freely available on GitHub for anyone to run on 
 2. State Level Expenditures from 2007 to 2015: ***Data_GDXSTATE_0715.Rds*** and ***Data_GDXSTATE_0715.csv***
 3. County Level Expenditures from 2007 to 2015: ***Data_GDXCTY_0715.Rds*** and ***Data_GDXCTY_0715.csv***
 4. County Level Expenditures for 2015: ***Data_GDXCTY15.Rds*** and ***DATA_GDXCTY15.csv***
+
+***_Caveats_**
+
+You will notice from reading the data description tab in FY 2015 file that some of the expenditure variables (General Operating Expenses, Construction, Loan Guaranty, and by association Total Expenditure) are **not distributed by Veteran residences**. This implies that those varibles are not truly geographic as they have not been distributed across the counties where Veterans live. These variables will provide misleading estimates and should not be included in any county or state level comparisons.
 
 # Data Consolidation Programs
 
@@ -60,7 +64,3 @@ Standardizing the county names is essential for pulling in the FIPS code so that
 4. Perform counts of counties by each state to make each state has the right number of counties.
 5. Verify that first, last, and middle counties for each state match. 
 6. Verify all county names that start with Mc, St., and Ste. 
-
-# Caveats 
-
-You will notice from reading the data description tab in FY 2015 file that some of the expenditure variables (General Operating Expenses, Construction, Loan Guaranty, and by association Total Expenditure) are **not distributed by Veteran residences**. This implies that those varibles are not truly geographic in nature and should not be included in any county or state level comparisons.
