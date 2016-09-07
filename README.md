@@ -13,7 +13,7 @@ All the code and data files are freely available on GitHub for anyone to run on 
 3. County Level Expenditures from 2007 to 2015: ***Data_GDXCTY_0715.Rds*** and ***Data_GDXCTY_0715.csv***
 4. County Level Expenditures for 2015: ***Data_GDXCTY15.Rds*** and ***DATA_GDXCTY15.csv***
 
-***_Caveats_**
+### _*Caveats_
 
 You will notice from reading the data description tab in FY 2015 file that some of the expenditure variables (General Operating Expenses, Construction, Loan Guaranty, and by association Total Expenditure) are **not distributed by Veteran residences**. This implies that those varibles are not truly geographic as they have not been distributed across the counties where Veterans live. These variables will provide misleading estimates and should not be included in any county or state level comparisons.
 
