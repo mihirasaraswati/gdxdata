@@ -15,7 +15,7 @@ All the code and data files are freely available on GitHub for anyone to run on 
 
 ### _*Caveats_
 
-You will notice from reading the data description tab in FY 2015 file that some of the expenditure variables (General Operating Expenses, Construction, Loan Guaranty, and by association Total Expenditure) are **not distributed by Veteran residences**. This implies that those varibles are not truly geographic as they have not been distributed across the counties where Veterans live. These variables will provide misleading estimates and should not be included in any county or state level comparisons.
+You will notice from reading the data description tab in FY 2015 file that some of the expenditure variables **(General Operating Expenses, Construction, Loan Guaranty, and by association Total Expenditure) are not distributed by Veteran residences**. This implies that those varibles are not truly geographic as they have not been distributed across the counties where Veterans live. These variables will provide misleading estimates and should not be included in any county or state level comparisons.
 
 # Data Consolidation Programs
 
