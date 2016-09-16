@@ -1,6 +1,11 @@
+# start zee clock 
+ptm <- proc.time()
+
 #ATTENTION - this command should be run before loading xlsx library
+#allocate sufficient RAM to workspaces
 options(java.parameters = "-Xmx8000m")
 
+#load the libraries
 library(xlsx)
 library(dplyr)
 
@@ -72,3 +77,6 @@ saveRDS(gdxstate0715, file="Data_GDXSTATE_0715.rds")
 #as CSV (broadly accepted)
 write.csv(gdxstate0715, file="Data_GDXSTATE_0715.csv")
 
+
+#stop clock 
+tot.time <- proc.time() - ptm

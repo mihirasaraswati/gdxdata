@@ -181,6 +181,7 @@ write.csv(gdxcty, file = "Data_GDXCTY_0715.csv")
 
 
 #SAVE just FY15 data
-saveRDS(filter(gdxcty, FY == "2015"), file="Data_GDXCTY15.rds")
+saveRDS(filter(gdxcty, FY == "2015"), 
+        file="Data_GDXCTY15.rds")
 # SAVE FY15 as CSV (NOTE!!! csv doesn't preserve the FIPS codes that start with zero)
 write.csv(filter(gdxcty, FY == "2015"), file="Data_GDXCTY15.csv")
